@@ -1,0 +1,37 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link rel="stylesheet" href="../static/css/login.css" type='text/css'>
+    <link rel="stylesheet" href="all.css" type="text/css">
+    
+</head>
+<body>
+    <div class="MINE">
+            <div class="PAGELOG1">
+
+                <div class="BERMUDAINFO">
+                    <h1>Bermuda Rental</h1>
+                    <p>Sign in to enjoy our wonderful vehicle renting services</p>
+                </div>
+                <form action="{{ url_for('report') }}" method="POST">
+                    <label for="userName">Username</label>
+                    <input type="text" name="userName" class="SPACE" placeholder="Username"><br>
+                    <label for="passWord">Password</label>
+                    <input type="password" name="passWord" class="SPACE" placeholder="Password"><br>
+                    <input type="submit" name="submit" class="mySubmit">
+                    
+                </form>
+            </div>
+            <div class="PAGELOG2">
+                <div class="TOPER"></div>
+            </div>
+            
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: rgba(0,0,0,0.5);
+}
+.MINE{
+    width: 50%;
+    height: 470px;
+    background-color: rgb(243, 2240, 241);
+    border-radius: 20px;
+    margin-top: 10%;
+    margin-left: 10%;
+    padding-left: 50px;
+    font-size: 20px;
+}
+.PAGELOG1{
+    text-align: center;
+    width: 60%;
+    height: inherit;
+    float: left;
+}
+.PAGELOG2{
+    width: 40%;
+    height: inherit;
+    background-image: url("../car1.png");
+    background-size: 100% 100%;
+    float: left;
+    
+}
+.TOPER{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(242,24,0,0.5);
+    border-radius: 0px 20px 20px 0px;
+}
+.SPACE{
+    width: 40%;   
+    padding: 6px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: 1px groove #DDDDDD;  
+}
+.SPACE:focus{
+    outline: none;
+    border-color: rgba(81, 203, 238, 1);
+    box-shadow: 0 0 10px rgba(81, 203, 238, 1);
+}
+.BERMUDAINFO{
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+.BERMUDAINFO h1{
+    font-size: 200%
+}
+.BERMUDAINFO p{
+    font-size: 90%;
+}
+.mySubmit{
+    width: 80px;
+    padding: 5px;
+    font-size: 80%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(242,24,0);
+    border: 1px solid;
+}
