@@ -1,2 +1,0 @@
-templates = for html files
-static = for js and css codes
