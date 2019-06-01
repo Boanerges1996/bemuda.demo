@@ -1,5 +1,4 @@
 from flask import Flask,request,jsonify,redirect,url_for, make_response,flash,send_from_directory,session
-from flask_restful import Resource, Api
 from mydbkey import myDb
 from flask_mysqldb import MySQL
 # from flask_mysqldb import MySQL
