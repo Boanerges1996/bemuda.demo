@@ -2,4 +2,3 @@ Flask
 JWT
 Flask_mysqldb
 uwsgi
-MySQLdb
