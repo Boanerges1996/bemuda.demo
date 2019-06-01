@@ -1,0 +1,5 @@
+Flask
+JWT
+Flask_mysqldb
+MySQLdb
+uwsgi
