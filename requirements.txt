@@ -1,4 +1,4 @@
-Flask
-JWT
-Flask_mysqldb
-uwsgi
+Flask==1.0.3
+jwt==0.6.1
+Flask-MySQLdb==0.2.0
+gunicorn==19.9.0
