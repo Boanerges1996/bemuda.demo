@@ -17,3 +17,4 @@ def close_db():
     db_connection = get_db()
     db_connection.close()
     setattr(g, 'db', None)
+

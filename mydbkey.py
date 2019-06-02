@@ -1,3 +1,4 @@
+
 class myDb():
     def __init__(self):
         self.MYQL_HOST = 'localhost'
