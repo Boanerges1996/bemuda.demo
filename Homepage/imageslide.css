@@ -1,0 +1,14 @@
+/* styled by Azungah Hillary */
+
+.imageEdit {
+    width: inherit;
+    height: 100%;
+    background-color: white;
+}
+
+.each-slide {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}

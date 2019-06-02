@@ -1,0 +1,148 @@
+/*
+Styled by Azungah Hillary
+*/
+
+
+.Header {
+    width: 100%;
+    height: 130px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.HeaderBotom {
+    color: orangered;
+    text-decoration: none;
+    border: 1px solid orangered;
+    background-color: orangered;
+    color: white;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.HeaderLogo {
+    background-image: url('./goodlogo.png');
+    height: 100%;
+    width: 80%;
+    background-size: cover;
+    width: 12%;
+    float: left;
+}
+
+
+
+
+.Header2 {
+    width: 88%;
+    height: inherit;
+    float: right;
+}
+
+.Header21 {
+    width: 100%;
+    height: 50%;
+    float: left;
+    text-align: right;
+    font-size: 120%;
+    color: orangered;
+}
+
+.Header22 {
+    width: 100%;
+    height: 50%;
+    float: left;
+    color: orangered;
+}
+
+.HeaderTopLink {
+    margin-left: 1%;
+    margin-right: 1%;
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid orangered;
+    background-color: orangered;
+    color: white;
+    padding: 2px;
+    border-radius: 5px;
+
+}
+
+.HeaderBotomLink {
+    margin-left: 1%;
+    margin-right: 1%;
+    float: right;
+    margin-top: 41px;
+
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 110%;
+    border: 1px solid orangered;
+    background-color: orangered;
+    color: white;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.HeaderTopLink:hover {
+    color: orange;
+}
+
+.HeaderBotomLink:hover {
+    color: orange;
+}
+
+@media screen and (max-width:1390px) {
+    .Header {
+        height: 100px;
+    }
+
+    .HeaderLogo {
+        background-image: url('./Logo.png');
+        height: inherit;
+        background-size: 100% 100%;
+        width: 20%;
+    }
+
+    .HeaderBotomLink {
+        margin-left: 1%;
+        margin-right: 1%;
+        float: right;
+        margin-top: 41px;
+        color: orangered;
+        font-size: 20px;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 80%;
+    }
+
+    .HeaderTopLink {
+        margin-left: 1%;
+        margin-right: 1%;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 70%;
+    }
+
+    .Header21 {
+        width: 100%;
+        height: 20%;
+    }
+
+    .Header2 {
+        width: 80%;
+        height: inherit;
+        float: right;
+    }
+
+
+}
+
+/* 
+!!!!!!!!!!!!!EDITING NEEDED!!!!!!!!!!!!!!!!
+When it gets to 640px the 
+1. Home
+2. About Us
+3. Services
+4. Contacts
+Will all be converted into a dropdown menu
+*/

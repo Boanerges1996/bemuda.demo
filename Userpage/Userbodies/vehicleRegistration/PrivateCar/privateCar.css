@@ -1,0 +1,12 @@
+.privateCars{
+    width: 100%;
+    text-align: left;
+    padding: 20px;
+}
+.btnStyleA{
+    background-color: orangered;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid orangered;
+    margin-top: 10px;
+}

@@ -1,0 +1,170 @@
+/* Styled by Azungah Hillary  */
+
+
+
+.Signin {
+    width: 80%;
+    height: 550px;
+    position: fixed;
+    top: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 70px;
+    border-radius: 30px;
+    z-index: 5;
+    transition: 1s;
+
+}
+
+.SigninActual {
+    width: 50%;
+    height: inherit;
+    float: left;
+    background-color: white;
+    border-radius: 30px 0 0 30px;
+    text-align: center;
+}
+
+.SigninOther {
+    width: 50%;
+    height: inherit;
+    float: left;
+    background-image: url('./goodlogo.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 0 30px 30px 0;
+}
+
+.myForm {
+    display: block;
+    padding: 50px;
+    height: 60%;
+}
+
+.forms {
+    height: inherit;
+    width: 100%;
+}
+
+.SigninOtherCovering {
+    height: inherit;
+    width: 100%;
+    background-color: rgba(253, 90, 15, 0.5);
+    border-radius: 0 30px 30px 0;
+}
+
+.SigninInputBox {
+    border-radius: 10px;
+    font-size: 15px;
+    width: 60%;
+    height: 20px;
+    border: 1px solid rgb(165, 173, 165);
+    margin-bottom: 5px;
+    font-family: Arial, FontAwesome;
+    padding: 5px;
+}
+
+.SigninInputBox:focus {
+    outline: none;
+    border-color: rgb(43, 60, 240);
+    box-shadow: 0 0 10px rgba(81, 203, 238, 1);
+}
+
+.SigninActualComment {
+    height: 20%;
+    width: 100%;
+}
+
+.SigninSubmitStyle {
+    font-size: 20px;
+    border-radius: 15px;
+    color: white;
+    background-color: orangered;
+    border: 2px solid orangered;
+    transition: all ease-in-out 500ms;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.SigninSubmitStyle:hover {
+    box-shadow: 0px 0px 0px 2px #fff inset;
+}
+
+@media screen and (max-width:1364px) {
+    .Signin {
+        width: 60%;
+        height: 500px;
+        position: fixed;
+        top: 20%;
+        left: 20%;
+        border-radius: 30px;
+        z-index: 5;
+        transition: 1s;
+
+    }
+
+    .SigninActual {
+        width: 50%;
+        height: inherit;
+        float: left;
+        background-color: white;
+        border-radius: 30px 0 0 30px;
+        text-align: center;
+    }
+
+    .SigninOther {
+        width: 50%;
+        height: inherit;
+        float: left;
+        background-image: url('./1.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        border-radius: 0 30px 30px 0;
+    }
+
+    .myForm {
+        display: block;
+        padding: 50px;
+        height: 60%;
+    }
+
+    .SigninOtherCovering {
+        height: inherit;
+        width: 100%;
+        background-color: rgba(230, 44, 23, 0.5);
+        border-radius: 0 30px 30px 0;
+    }
+
+    .SignInputBox {
+        border-radius: 10px;
+        font-size: 15px;
+        width: 50%;
+        height: 25px;
+        border: 1px solid rgb(165, 173, 165);
+        margin-bottom: 5px;
+        font-family: Arial, FontAwesome;
+        padding: 5px;
+    }
+
+    .LoginInputBox:focus {
+        outline: none;
+        border-color: rgb(43, 60, 240);
+        box-shadow: 0 0 10px rgba(81, 203, 238, 1);
+    }
+
+    .LoginActualComment {
+        height: 10%;
+        width: 100%;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .LoginSubmitStyle {
+        font-size: 20px;
+        border-radius: 15px;
+        color: white;
+        background-color: orangered;
+        border: 1px solid orangered;
+    }
+
+}

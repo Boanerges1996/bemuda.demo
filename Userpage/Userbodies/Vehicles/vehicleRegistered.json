@@ -1,0 +1,49 @@
+[
+    {
+        "id":1,
+        "imageUrl":"https://firebasestorage.googleapis.com/v0/b/vehicle-rental-a0b39.appspot.com/o/Vehicles%2FBus%2F3.jpg?alt=media&token=8e46b803-af6d-4722-9155-caa3cac39e89",
+        "companyName":"VVIP",
+        "Capacity":100,
+        "Car_number":"GH 245 17",
+        "location":"Accra",
+        "Name":"Samson Nkrumah Kwaku",
+        "imageurl":"https://firebasestorage.googleapis.com/v0/b/vehicle-rental-a0b39.appspot.com/o/Images%2FdefaultAvatar%2FdefaultUserAvatar.png?alt=media&token=b044f2f2-f3c7-492d-8955-7aa44e43dd32",
+        "telephone":"0244581027",
+        "Age":20,
+        "city":"Accra",
+        "Sex":"M"
+    },
+    {
+        "id":2,
+        "imageUrl":"https://firebasestorage.googleapis.com/v0/b/vehicle-rental-a0b39.appspot.com/o/Vehicles%2FBus%2FBuses%2Fbus2.jpg?alt=media&token=b8568219-4998-4fa0-a98f-51bf0083b337",
+        "companyName":"VIP",
+        "Capacity":150,
+        "Car_number":"GH 245 17",
+        "location":"Takoradi"
+    },
+    {
+        "id":3,
+        "imageUrl":"https://firebasestorage.googleapis.com/v0/b/vehicle-rental-a0b39.appspot.com/o/Vehicles%2FBus%2FBuses%2Fbus3.jpg?alt=media&token=c8bf9b38-0897-483b-ba17-93ba8eaff285",
+        "companyName":"VIP",
+        "Capacity":125,
+        "Car_number":"GH 045 17",
+        "location":"Takoradi"
+    },
+    {
+        "id":4,
+        "imageUrl":"https://firebasestorage.googleapis.com/v0/b/vehicle-rental-a0b39.appspot.com/o/Vehicles%2FBus%2FBuses%2Fbus4.jpg?alt=media&token=25d26937-1000-45ac-836a-38635ba3f5bf",
+        "companyName":"OA",
+        "Capacity":150,
+        "Car_number":"GH 234 18",
+        "location":"Accra"
+    },
+    {
+        "id":5,
+        "imageUrl":"https://firebasestorage.googleapis.com/v0/b/vehicle-rental-a0b39.appspot.com/o/Vehicles%2FBus%2F3.jpg?alt=media&token=8e46b803-af6d-4722-9155-caa3cac39e89",
+        "companyName":"VVIP",
+        "Capacity":10,
+        "Car_number":"GH 245 17",
+        "location":"Kumasi"
+    }
+
+]

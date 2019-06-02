@@ -1,0 +1,41 @@
+.vehicleregistration{
+    
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    border-top: 1px lightgray;
+    border-left: 1px lightgray;
+    border-right: 1px lightgray;
+    box-shadow: 0 0 4px 4px lightgray;
+    border-radius: 20px;
+    height: auto;
+}
+.vRegHead{
+    font-weight: bold;
+    color: white;
+    background-color: orangered;
+    height: 60px;
+    border-radius: 20px 20px 0 0;
+    line-height: 50px;
+
+}
+.labelInput{
+    width: 20%;
+    float: left;
+}
+
+
+
+
+@media screen and (max-width:800px){
+    .vehicleregistration{
+        width: 80%;
+        margin: 0 auto;
+        text-align: center
+    }
+    .labelInput{
+        width: 25%;
+        float: left;
+        font-size: 15px;
+    }
+}

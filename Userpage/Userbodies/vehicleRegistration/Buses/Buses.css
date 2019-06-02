@@ -1,0 +1,37 @@
+.buses{
+    width: 100%;
+    text-align: left;
+    padding: 20px;
+}
+.Infostyle{
+    width: 100%;
+    float: left;
+}
+.InfostyleA{
+    width: 100%
+}
+.InfostyleB{
+    width: 100%;
+}
+.styleInput{
+    width: 80%;
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    padding: 3px;
+}
+.imgUpload{
+    width: 100%;
+    text-align: left;
+}
+.btnStyle{
+    background-color: orangered;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid orangered;
+}
+.imgUpload input[type='file']::-webkit-file-upload-button{
+    background-color: orangered;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid orangered;
+}

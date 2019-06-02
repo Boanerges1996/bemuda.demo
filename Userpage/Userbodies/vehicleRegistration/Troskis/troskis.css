@@ -1,0 +1,31 @@
+.Infostyle{
+    width: 100%;
+    float: left;
+}
+.InfostyleA{
+    width: 100%
+}
+.InfostyleB{
+    width: 100%;
+}
+.styleInput{
+    width: 80%;
+    border-radius: 10px;
+    border: 1px solid rgb(27, 133, 175);
+    padding: 3px;
+}
+.troski{
+    text-align: left;
+    padding: 20px;
+    width: 100%;
+}
+.imgUpload{
+    width: 100%;
+    text-align: left;
+}
+.btnStyle{
+    background-color: orangered;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid orangered;
+}

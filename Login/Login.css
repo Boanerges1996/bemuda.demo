@@ -1,0 +1,148 @@
+.Login{
+    width: 60%;
+    height: 500px;
+    position: fixed;
+    top: 200px;
+    left:200px;
+    border-radius: 30px;
+    z-index: 5;
+    transition: 1s;
+
+}
+.LoginActual{
+    width: 50%;
+    height: inherit;
+    float: left;
+    background-color: white;
+    border-radius: 30px 0 0 30px;
+    text-align: center;
+}
+.LoginOther{
+    width: 50%;
+    height: inherit;
+    float: left;
+    background-image: url('./1.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 0 30px 30px 0;
+}
+.myForm{
+    display: block;
+    padding: 50px;
+}
+.LoginOtherCovering{
+    height: inherit;
+    width: 100%;
+    background-color: rgba(230,44,23,0.5);
+    border-radius: 0 30px 30px 0;
+}
+.LoginLabels{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.LoginInputBox{
+    border-radius: 10px;
+    font-size: 15px;
+    width: 50%;
+    height: 25px;
+    border: 1px solid rgb(165,173,165);
+    margin-bottom: 5px;
+    font-family: Arial, FontAwesome;
+    padding: 5px;
+}
+.LoginInputBox:focus{
+    outline: none;
+    border-color: rgb(43, 60, 240);
+    box-shadow: 0 0 10px rgba(81, 203, 238, 1);
+}
+.LoginActualComment{
+    height:50%;
+    width: 100%;
+}
+
+.LoginSubmitStyle{
+    font-size: 20px;
+    border-radius: 15px;
+    color: white;
+    background-color: orangered;
+    border: 2px solid orangered;
+    transition: all ease-in-out 500ms;
+    padding-left:10px;
+    padding-right:10px;
+    
+}
+.LoginSubmitStyle:hover{
+    box-shadow: 0px 0px 0px 2px #fff inset;
+}
+@media screen and (max-width:1364px){
+    .Login{
+        width: 60%;
+        height: 350px;
+        position: fixed;
+        top: 20%;
+        left:20%;
+        border-radius: 30px;
+        z-index: 5;
+        transition: 1s;
+    
+    }
+    .LoginActual{
+        width: 50%;
+        height: inherit;
+        float: left;
+        background-color: white;
+        border-radius: 30px 0 0 30px;
+        text-align: center;
+    }
+    .LoginOther{
+        width: 50%;
+        height: inherit;
+        float: left;
+        background-image: url('./1.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        border-radius: 0 30px 30px 0;
+    }
+    .myForm{
+        display: block;
+        padding: 50px;
+    }
+    .LoginOtherCovering{
+        height: inherit;
+        width: 100%;
+        background-color: rgba(230,44,23,0.5);
+        border-radius: 0 30px 30px 0;
+    }
+    .LoginLabels{
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    .LoginInputBox{
+        border-radius: 10px;
+        font-size: 15px;
+        width: 50%;
+        height: 25px;
+        border: 1px solid rgb(165,173,165);
+        margin-bottom: 5px;
+        font-family: Arial, FontAwesome;
+        padding: 5px;
+    }
+    .LoginInputBox:focus{
+        outline: none;
+        border-color: rgb(43, 60, 240);
+        box-shadow: 0 0 10px rgba(81, 203, 238, 1);
+    }
+    .LoginActualComment{
+        height:50%;
+        width: 100%;
+    }
+    
+    .LoginSubmitStyle{
+        font-size: 20px;
+        border-radius: 15px;
+        color: white;
+        background-color: orangered;
+        border: 1px solid orangered;
+    }
+    
+}

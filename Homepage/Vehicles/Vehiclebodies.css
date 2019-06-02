@@ -1,0 +1,158 @@
+.VehiclesCarousel{
+    width:25%;
+    height: 50vh;
+    background-color:  rgba(198, 228, 232, 0.51);
+    border-radius: 20px;
+    margin-top: 5%;
+    margin-left: 5%;
+    
+    box-shadow: 0 0 10px 10px  rgba(82, 175, 186, 0.51);
+    float:left;
+}
+.carImgSearch{
+    width: 50%;
+    height: 65%;
+    margin-top: 4%;
+    margin-left: 4%;
+    float:left;
+}
+.Vehicleinfomation{
+    width: 40%;
+    height: 65%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    background-color: inherit;
+    float:left;
+}
+.Vehiclesearchbottom{
+    width:20%;
+    height:10%;
+    margin-left: 4%;
+    background-color: rgba(255, 69, 0, 0.51);
+    float:left;
+}
+.Vehicleinfocard{
+    padding: 6%;
+    height:20%;
+    width: 80%;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.Vehicleinfocard h3{
+    display:inline;
+    font-family: 'Times New Roman';
+    color: rgb(64,128,128);
+    
+}
+.Vehicleinfocard h4{
+    display: inline;
+}
+
+
+
+
+
+
+
+
+
+/*  Responsiveness  width of 1000px*/
+@media screen and (max-width:1000px){
+    .VehiclesCarousel{
+        width:40%;
+        height: 45vh;
+        background-color:  rgb(225, 238, 238);
+    }
+    .carImgSearch{
+        width: 50%;
+        height: 65%;
+        margin-top: 4%;
+        margin-left: 4%
+    }
+    .Vehicleinfocard{
+        padding: 4%;
+        height:20%;
+        width: 80%;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+/*  Responsiveness  width of 840px*/
+@media screen and (max-width:840px){
+    .VehiclesCarousel{
+        width:50%;
+        height: 45vh;
+        background-color:  rgb(225, 238, 238);
+    }
+    .carImgSearch{
+        width: 50%;
+        height: 65%;
+        margin-top: 4%;
+        margin-left: 4%
+    }
+    .Vehicleinfocard h3{
+        display:inline;
+        font-family: 'Times New Roman';
+        color: rgb(64,128,128);
+        font-size: 18px;
+        
+    }
+    .Vehicleinfocard h4{
+        display: inline;
+        font-size: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*  Responsiveness  width of 640*/
+@media screen and (max-width:640px){
+    .VehiclesCarousel{
+        width:80%;
+        height: 45vh;
+        background-color:  rgb(225, 238, 238);
+    }
+    .carImgSearch{
+        width: 50%;
+        height: 65%;
+        margin-top: 4%;
+        margin-left: 4%
+    }
+    .Vehicleinfocard{
+        padding: 6%;
+        height:20%;
+        width: 80%;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+    .Vehicleinfocard h3{
+        display:inline;
+        font-family: 'Times New Roman';
+        color: rgb(64,128,128);
+        
+    }
+    .Vehicleinfocard h4{
+        display: inline;
+    }
+}

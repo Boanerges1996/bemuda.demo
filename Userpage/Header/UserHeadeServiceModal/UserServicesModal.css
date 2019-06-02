@@ -1,0 +1,19 @@
+.UserServiceModal{
+    width: 40%;
+    height: 50vh;
+    position: absolute;
+    top:71px;
+    left: 0px;
+    background-color: rgb(29, 15, 15);
+    z-index: 50;
+}
+.ServicesNames{
+    height: 10%;
+    padding-top: 10px;
+    font-size: 20px;
+    color: white;
+}
+.ServicesNames:hover{
+    background-color: rgb(8, 4, 4);
+    cursor: pointer;
+}

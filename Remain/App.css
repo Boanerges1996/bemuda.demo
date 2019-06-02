@@ -1,0 +1,317 @@
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  #ReactBackgroundSlider {
+    height: inherit;
+    background-size: cover;
+    width: 100%;
+  }
+  
+  
+  .backgroundslider {
+    width: 100%;
+    height: inherit;
+  }
+  
+  .cards {
+    height: inherit;
+    width: 80%;
+    float: left;
+    margin-left: 10%;
+    margin-right: 10px;
+  }
+  
+  .headd {
+    width: 100%;
+    background-color: orangered;
+    height: 10%;
+  
+  }
+  
+  .backwork {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 25%;
+  }
+  
+  .backwork p {
+    font-weight: bold;
+    color: rgba(255, 69, 0, 1);
+    margin-top: 50px;
+    text-align: center;
+    margin-left: 40%;
+    margin-right: 40%;
+  
+  }
+  
+  .backwork Button {
+    background-color: rgba(255, 69, 0, 1);
+    width: 10%;
+    height: inherit;
+    border-radius: 15px;
+    font-size: 15px;
+    border: 1px solid rgba(255, 69, 0, 1);
+    padding: 5px;
+    color: white;
+    margin-top: 1%;
+  
+  
+  
+  
+  
+  
+  }
+  
+  .main {
+    width: 100%;
+    height: 1000px;
+  }
+  
+  .aboutus {
+    width: 100%;
+    height: inherit;
+    background-color: rgba(255, 69, 0, 1);
+    float: left;
+    margin-top: 50px;
+  
+  }
+  
+  .word {
+    width: 30%;
+    height: inherit;
+    color: white;
+    float: left;
+    text-align: center;
+    margin-left: 5%;
+  }
+  
+  .solutions {
+    width: 30%;
+    height: inherit;
+    color: white;
+    float: left;
+  
+    font-size: 20px;
+  }
+  
+  .lastdiv {
+    width: 30%;
+    height: inherit;
+    color: white;
+    float: left;
+  
+    font-size: 20px;
+  
+  }
+  
+  .services {
+    width: 100%;
+    height: inherit;
+    background-color: white;
+    float: left;
+  
+  }
+  
+  .contact {
+    width: 100%;
+    height: inherit;
+  }
+  
+  .lead {
+    font-size: 30px;
+    color: white;
+  }
+  
+  .serve {
+    width: 100%;
+    height: inherit;
+  }
+  
+  .list {
+    text-align: left;
+  }
+  
+  .lead2 {
+    color: rgba(255, 69, 0, 1);
+    font-size: 30px;
+  }
+  
+  
+  .display-3 {
+    font-size: 50px;
+    color: white;
+  }
+  
+  .display-32 {
+    font-size: 50px;
+    color: rgba(255, 69, 0, 1);
+  }
+  
+  .footer {
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.8);
+    float: left;
+    font-weight: bold;
+  }
+  
+  .image {
+    float: left;
+    height: 500px;
+    width: 30%;
+  }
+  
+  .instructions {
+    height: 500px;
+    width: 100%;
+    background-color: white;
+    float: left;
+    margin-top: 200px;
+    color: rgba(255, 69, 0,1);
+  }
+  
+  .instruct {
+    height: inherit;
+    width: 60%;
+    color: rgba(255, 69, 0, 1);
+    float: left;
+    font-size: 30px;
+    text-align: left;
+  }
+  
+  .slide {
+    height: inherit;
+    width: 100%;
+    float: left;
+    margin-top: 300px;
+    margin-bottom: 50px;
+  
+    background-color: rgba(255, 69, 0, 1)
+  }
+  
+  .ima {
+    background-size: cover;
+  }
+  
+  .slider {
+    background-size: contain;
+  }
+  
+  .note {
+    height: inherit;
+    width: 100%;
+    float: left;
+    color: white;
+    font-size: 30px;
+    background-color: rgba(255, 69, 0, 1);
+    margin-top: 0px;
+  
+  }
+  
+  .about {
+    height: 80%;
+    width: 40%;
+    float: left;
+    text-align: justify;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+  .list {
+    list-style-type: none;
+    text-align: center;
+  }
+  
+  .button {
+  
+    float: left;
+    height: inherit;
+    margin-top: 50px;
+    margin-left: 50%;
+    margin-right: 60%;
+    background-color: rgba(82, 175, 186, 0.51);
+    color: rgba(255, 69, 0, 1);
+    border-radius: 15px;
+    font-size: 15px;
+    border: 1px solid rgb(165, 173, 165);
+    padding: 5px;
+  
+  }
+  
+  .Logo {
+    background-image: url('C:\Users\Lishakiya\bermuda\src\Components\Header\goodlogo.png');
+    height: 40%;
+    width: 100%;
+    float: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 35%;
+  }
+  
+  .motivate {
+    width: 100%;
+    float: left;
+    height: 60%;
+    font-size: 20px;
+  
+  }
+  
+  .one {
+    width: 100%;
+    float: left;
+    height: 20%;
+    margin-top: 10%;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .two {
+    width: 100%;
+    float: left;
+    height: 20%;
+  }
+  
+  .solutionss {
+    list-style-type: none;
+    margin-top: 50px;
+    font-size: 20px;
+  }
