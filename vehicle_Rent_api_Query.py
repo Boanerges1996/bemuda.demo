@@ -355,11 +355,11 @@ def register_vehicle(car_no,car_photo_url,vehicle_type,capacity,company_name,use
 def get_all_vehicles():
     cursor = get_db().cursor()
     query = '''
-        SELECT user_info.firstname,user_info.lastname,user_info.othernames,user_info.username,
-        user_info.email,user_info.telephone_number,user_info.user_avatar,vehicles.car_no,
+        SELECT User_info.firstname,User_info.lastname,User_info.othernames,User_info.username,
+        User_info.email,User_info.telephone_number,User_info.user_avatar,vehicles.car_no,
         vehicles.car_photo_url,vehicles.capacity,vehicles.vehicle_type,vehicles.company_name
-        FROM user_info
-        JOIN vehicles ON user_info.user_id=vehicles.user_id
+        FROM User_info
+        JOIN vehicles ON User_info.user_id=vehicles.user_id
     '''
     cursor.execute(query)
     result = cursor.fetchall()
