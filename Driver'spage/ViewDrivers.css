@@ -1,0 +1,30 @@
+/* sytled by Lawrence Ofoli Mensah */
+.DriverClass {
+    display: inline-block;
+    margin: 10px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 2px #ccc;
+    width: 27%;
+    padding: 20px;
+
+}
+
+.DriverClass img {
+    float: left;
+    width: 50%;
+    height: 200px;
+}
+
+.Base {
+    position: fixed;
+    background-color: #ccc;
+    border: 1px 1px 1px black;
+    padding: 16px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+    width: 40%;
+    height: 500px;
+    z-index: 500;
+    top: 20%;
+    left: 35%;
+}

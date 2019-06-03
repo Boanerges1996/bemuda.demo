@@ -1,0 +1,166 @@
+/* styled by Lawrence Ofoli Mensah */
+.Header {
+    background: rgb(241, 222, 222);
+    height: 100px;
+    width: 100%;
+
+}
+
+
+.UpperBlock {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: rgba(230, 44, 23, 1);
+}
+
+
+.ProfileConstant {
+    position: absolute;
+    bottom: 0;
+    left: 33%;
+    width: 30%;
+    ;
+    padding: 0 30px;
+    background: white;
+    height: 80%;
+
+}
+
+.IMG {
+    position: absolute;
+    top: 0;
+    left: 27%;
+    width: 40%;
+    height: 70%;
+    border-radius: 50%;
+    background-image: url("./pi.png");
+    background-size: cover;
+    margin-bottom: 20px;
+
+}
+
+.ProfileConstant h2 {
+    position: absolute;
+    left: 100px;
+    bottom: 10px;
+    text-align: center;
+}
+
+.ftr {
+    text-align: center;
+    background: rgb(241, 222, 222);
+    height: 10%;
+    width: 100%;
+
+}
+
+.ProfileBlocks {
+    background: white;
+    width: 30%;
+    height: 400px;
+    display: inline-block;
+    margin-left: 30px;
+    border: 2px solid rgba(230, 44, 23, 1);
+    border-left: 1px;
+    border-top: 1px;
+    border-bottom: 1px;
+    margin-top: 50px;
+    overflow: auto;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+
+.ProfileBlock {
+    background: white;
+    width: 30%;
+    height: 400px;
+    display: inline-block;
+    margin-left: 30px;
+    border: 2px solid rgba(230, 44, 23, 1);
+    border-left: 1px;
+    border-right: 1px;
+    border-top: 1px;
+    border-bottom: 1px;
+    margin-top: 50px;
+    overflow: auto;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+
+.butt {
+    color: orangered;
+    border-radius: 15px;
+    font-size: 15px;
+    border: 1px solid rgb(165, 173, 165);
+    padding: 5px;
+
+}
+
+
+.Wrapper {
+    width: 100%;
+    height: 500px;
+}
+
+.Updating {
+    position: fixed;
+    z-index: 500;
+    background: red;
+    width: 40%;
+    height: 350px;
+    top: 30%;
+    left: 30%;
+}
+
+.UpdateInfo {
+    position: fixed;
+    z-index: 700;
+    background: whitesmoke;
+    width: 35%;
+    height: 300px;
+    top: 35%;
+    left: 32%;
+}
+
+.UpdateInfo input {
+    padding: 5px;
+    margin: 3px;
+    width: 65%;
+    border: none;
+    color: rgb(58, 46, 46);
+    outline: none;
+    border-bottom: 1px solid #445366;
+    font-size: 1em;
+    font-weight: 300;
+    padding-bottom: 1px;
+    margin-top: 1px
+}
+
+.UpdateDriverInfo {
+    position: fixed;
+    z-index: 700;
+    background: whitesmoke;
+    width: 35%;
+    height: 300px;
+    top: 35%;
+    left: 32%;
+}
+
+.UpdateDriverInfo input {
+    padding: 5px;
+    margin: 3px;
+    width: 65%;
+    border: none;
+    color: rgb(58, 46, 46);
+    outline: none;
+    border-bottom: 1px solid #445366;
+    font-size: 1em;
+    font-weight: 300;
+    padding-bottom: 1px;
+    margin-top: 1px
+}
