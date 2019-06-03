@@ -8,6 +8,7 @@ from passlib.hash import sha256_crypt
 from functools import wraps
 import jwt
 import vehicle_Rent_api_Query
+from logging import error
 
 
 app = Flask(__name__)
@@ -60,7 +61,8 @@ def loggin_required(f):
             decode_token = jwt.decode(token,app.config['SECRET_KEY'])
             username = decode_token["user"]
             verify_token = vehicle_Rent_api_Query.verify_token(username)
-        except:
+        except Exception as exc:
+             error(exc)
             return jsonify({
                 "user-token":"invalid"
             }),401
