@@ -12,8 +12,6 @@ export default function PrivateCar(props) {
     // </div>
     <Troski />
   );
-}
-
 export function Info(props) {
   return (
     <div className="Infostyle">
