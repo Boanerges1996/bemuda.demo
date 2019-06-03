@@ -154,32 +154,151 @@ def register_driver(id):
     sex=request.json["sex"],
     license = request.json["license_no"]
     residential_address = request.json["residential_address"]
-    verify_id_exist = vehicle_Rent_api_Query.verify_id_exist(id)
-    if verify_id_exist:
-        verify_isAdmin = vehicle_Rent_api_Query.verify_if_is_admin(id)
+    verify_id_exits = vehicle_Rent_api_Query.verify_id_in_user_info(id)
+    if verify_id_exits:
+        verify_id_in_drivers = vehicle_Rent_api_Query.verify_id_in_drivers(id)
+        if verify_id_in_drivers:
+            register = vehicle_Rent_api_Query.register_driver(date_of_birth,license,sex,residential_address,id)
+            return register
 
-        if verify_isAdmin:
-            register_driver_Admin = vehicle_Rent_api_Query.register_driver(date_of_birth,license,
-            sex,residential_address,id)
-            return register_driver_Admin
         else:
-            verify_id_in_drivers = vehicle_Rent_api_Query.verify_userID_in_drivers(id)
-
-            if verify_id_in_drivers:
-                register_driver = vehicle_Rent_api_Query.register_driver(date_of_birth,
-                license,sex,residential_address,id)
-                return register_driver
-
-            else:
-                return jsonify({
-                    "message":"Only administrators can register more drivers"
-                })
-    
-
+            return jsonify({
+                "message":"You have already registered as a driver"
+            })
     else:
         return jsonify({
-            "message":"Invalid id, therefore cant register as a driver"
+            "message":"invalid id"
         })
+
+
+
+@app.route('/user/driver/info/<id>',methods=["GET","PUT"])
+@loggin_required
+def driver_info(id):
+    if request.method=="GET":
+        verify_id_exits = vehicle_Rent_api_Query.verify_id_in_user_info(id)
+        if verify_id_exits:
+            verify_id_in_drivers = vehicle_Rent_api_Query.verify_id_in_drivers(id)
+            if verify_id_in_drivers:
+                return jsonify({
+                    "message":"You have not registered as a driver"
+                })
+
+            else:
+                get_driver_info = vehicle_Rent_api_Query.get_driver_info(id)
+                return get_driver_info
+        else:
+            return jsonify({
+                "message":"invalid id"
+            })
+
+    
+    elif request.method=="PUT":
+        date_of_birth = request.json["date_of_birth"]
+        sex=request.json["sex"],
+        license = request.json["license_no"]
+        residential_address = request.json["residential_address"]
+        verify_id_exits = vehicle_Rent_api_Query.verify_id_in_user_info(id)
+        if verify_id_exits:
+            verify_id_in_drivers = vehicle_Rent_api_Query.verify_id_in_drivers(id)
+            if verify_id_in_drivers:
+                return jsonify({
+                    "message":"You have not registered as a driver therefore cant update"
+                })
+
+            else:
+                update_driver = vehicle_Rent_api_Query.update_driver_info(date_of_birth,license,sex,residential_address,id)
+                return update_driver
+                
+        else:
+            return jsonify({
+                "message":"invalid id"
+            })
+
+
+
+@app.route('/user/drivers/info/<id>',methods=["GET","DELETE"])
+@loggin_required
+def get_all_drivers(id):
+    if request.method=="GET":
+        verify_id_exits = vehicle_Rent_api_Query.verify_id_in_user_info(id)
+        if verify_id_exits:
+            get_drivers = vehicle_Rent_api_Query.get_all_drivers()
+            return get_drivers
+                
+        else:
+            return jsonify({
+                "message":"invalid id"
+            })
+
+    elif request.method=="DELETE":
+        '''
+            Must be tested
+        '''
+        user_id = request.json["user_id"]
+        verify_id_exits = vehicle_Rent_api_Query.verify_id_in_user_info(id)
+        if verify_id_exits:
+            verify_isAdmin = vehicle_Rent_api_Query.verify_if_is_admin(id)
+            if verify_isAdmin:
+                delete_driver = vehicle_Rent_api_Query.delete_driver(user_id)
+                return delete_driver
+            
+            else:
+                return jsonify({
+                    "message":"You are not an admin and therefore cant delete an account"
+                })
+                
+        else:
+            return jsonify({
+                "message":"invalid id"
+            })
+    
+
+
+
+@app.route('/user/vehicle/registration/<id>',methods=["POST"])
+@loggin_required
+def register_vehicle(id):
+    data = request.json
+    car_no = request.json["car_no"]
+    car_photo_url = request.json["car_photo_url"]
+    vehicle_type = request.json["vehicle_type"]
+    capacity = request.json["capacity"]
+    company_name = request.json["company_name"]
+    verify_id_exits = vehicle_Rent_api_Query.verify_id_in_user_info(id)
+    if verify_id_exits:
+        register = vehicle_Rent_api_Query.register_vehicle(car_no,car_photo_url,vehicle_type,capacity,company_name,id)
+        if register:
+            return jsonify(data)
+
+        else:
+            return jsonify({
+                "message":"Car number already exist"
+            }) 
+            
+            
+        
+    else:
+        return jsonify({
+            "message":"invalid id"
+        })
+
+
+
+@app.route('/user/vehicle/all/<id>',methods=["GET"])
+@loggin_required
+def get_all_vehicles(id):
+    verify_id_exits = vehicle_Rent_api_Query.verify_id_in_user_info(id)
+    if verify_id_exits:
+            vehicles = vehicle_Rent_api_Query.get_all_vehicles()
+            return vehicles
+        
+    else:
+        return jsonify({
+            "message":"invalid id"
+        })
+
+
 
 
 

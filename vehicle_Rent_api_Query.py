@@ -188,31 +188,34 @@ def delete_user(id):
         })
 
 
-def verify_id_exist(id):
+
+def verify_id_in_user_info(id):
     cursor = get_db().cursor()
     query = '''
-        SELECT user_id FROM user_info WHERE user_id =%s
+        SELECT username FROM user_info WHERE user_id=%s
     '''
     cursor.execute(query,(int(id),))
     result = cursor.fetchall()
-    if result==tuple():
+    if result:
         return True
-    
     else:
         return False
     
 
-def verify_userID_in_drivers(id):
+def verify_id_in_drivers(id):
     cursor = get_db().cursor()
-    query = '''
-        SELECT * FROM drivers WHERE user_id=%s
+    query = query = '''
+        SELECT driver_id FROM drivers WHERE user_id=%s
     '''
     cursor.execute(query,(int(id),))
     result = cursor.fetchall()
-    if result == tuple():
-        True
-    else:
+    if result:
         return False
+    else:
+        return True
+
+
+
 
 
 def register_driver(date_of_birth,license,sex,residential_address,id):
@@ -232,3 +235,153 @@ def register_driver(date_of_birth,license,sex,residential_address,id):
         return jsonify({
             "message":"License number already exist"
         })
+
+def get_driver_info(id):
+    cursor = get_db().cursor()
+    query = '''
+        SELECT user_info.firstname,user_info.lastname,user_info.othernames,user_info.username,
+        user_info.email,user_info.telephone_number,user_info.user_avatar,
+        drivers.date_of_birth,drivers.license_no,drivers.sex,drivers.residential_address
+        FROM user_info
+        JOIN drivers ON user_info.user_id=drivers.user_id WHERE user_info.user_id=%s
+    '''
+    cursor.execute(query,(int(id),))
+    result = cursor.fetchall()
+    return jsonify({
+        "firstname":result[0][0],
+        "lastname":result[0][1],
+        "othername":result[0][2],
+        "username":result[0][3],
+        "email":result[0][4],
+        "telephone_number":result[0][5],
+        "user_avatar":result[0][6],
+        "date_of_birth":result[0][7],
+        "license":result[0][8],
+        "sex":result[0][9],
+        "residential_address":result[0][10],
+        "user_id":id
+    })
+
+
+
+
+def update_driver_info(date_of_birth,license,sex,residential_address,id):
+    cursor = get_db().cursor()
+    query = '''
+        UPDATE drivers SET date_of_birth=%s,license_no=%s,sex=%s,residential_address=%s
+        WHERE user_id=%s
+    '''
+    cursor.execute(query,(date_of_birth,license,sex,residential_address,int(id),))
+    get_db().commit()
+    return jsonify({
+        "message":"Update successful"
+    })
+
+
+
+def get_all_drivers():
+    cursor = get_db().cursor()
+    query = '''
+        SELECT user_info.firstname,user_info.lastname,user_info.othernames,user_info.username,
+        user_info.email,user_info.telephone_number,user_info.user_avatar,
+        drivers.date_of_birth,drivers.license_no,drivers.sex,drivers.residential_address,
+        drivers.user_id
+        FROM 
+            user_info
+        INNER JOIN 
+            drivers ON user_info.user_id=drivers.user_id
+    '''
+    
+    cursor.execute(query)
+    drivers_tuple = cursor.fetchall()
+    i=1
+    drivers={}
+    for driver in drivers_tuple:
+        drivers.update({
+            "driver"+str(i):{
+                "firstname":driver[0],
+                "lastname":driver[1],
+                "othername":driver[2],
+                "username":driver[3],
+                "email":driver[4],
+                "telephone_number":driver[5],
+                "user_avatar":driver[6],
+                "date_of_birth":driver[7],
+                "license":driver[8],
+                "sex":driver[9],
+                "residential_address":driver[10],
+                "user_id":driver[11]
+            }
+        })
+        i=i+1
+    return jsonify(drivers)
+
+
+
+def delete_driver(id):
+    cursor = get_db().cursor()
+    query = '''
+        DELETE FROM drivers WHERE user_id=%s
+    '''
+    try:
+        cursor.execute(query,(int(id),))
+        get_db().commit()
+        return jsonify({
+            "message":"User deleted successfully"
+        })
+    except:
+        return jsonify({
+            "message":"User id not a driver therefore cant be deleted"
+        })
+
+
+def register_vehicle(car_no,car_photo_url,vehicle_type,capacity,company_name,user_id):
+    cursor = get_db().cursor()
+    query = '''
+        INSERT INTO vehicles 
+        (car_no,car_photo_url,vehicle_type,capacity,company_name,user_id)
+        VALUES (%s,%s,%s,%s,%s,%s)
+    '''
+    try:
+        cursor.execute(query,(car_no,car_photo_url,vehicle_type,int(capacity),company_name,int(user_id),))
+        get_db().commit()
+        return True   
+
+    except:
+        return False
+
+
+
+def get_all_vehicles():
+    cursor = get_db().cursor()
+    query = '''
+        SELECT user_info.firstname,user_info.lastname,user_info.othernames,user_info.username,
+        user_info.email,user_info.telephone_number,user_info.user_avatar,vehicles.car_no,
+        vehicles.car_photo_url,vehicles.capacity,vehicles.vehicle_type,vehicles.company_name
+        FROM user_info
+        JOIN vehicles ON user_info.user_id=vehicles.user_id
+    '''
+    cursor.execute(query)
+    result = cursor.fetchall()
+    vehicleUsers = {}
+    i=0
+    for vehicle in result:
+        vehicleUsers.update({
+            "user"+str(i):{
+                "firstname":vehicle[0],
+                "lastname":vehicle[1],
+                "othername":vehicle[2],
+                "username":vehicle[3],
+                "email":vehicle[4],
+                "telephone_number":vehicle[5],
+                "user_avatar":vehicle[6],
+                "car_no":vehicle[7],
+                "car_photo_url":vehicle[8],
+                "capacity":vehicle[9],
+                "car_type":vehicle[10],
+                "company_name":vehicle[11]
+            }
+        })
+        i=i+1
+    
+    return jsonify(vehicleUsers)
