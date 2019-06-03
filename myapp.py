@@ -62,7 +62,7 @@ def loggin_required(f):
             username = decode_token["user"]
             verify_token = vehicle_Rent_api_Query.verify_token(username)
         except Exception as exc:
-             error(exc)
+            error(exc)
             return jsonify({
                 "user-token":"invalid"
             }),401
