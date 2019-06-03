@@ -7,7 +7,7 @@ import  SigninBackdrop from '../Signin/signinBackdrop';
 
 
 /*
-This Code is Written by Nkrumah Samson Kwaku
+wriiten by Azungah Hillary
 
 This Contains the Header component with the Logo, and other
 Links such as sign-in,sign-up,about-us,service
