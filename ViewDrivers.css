@@ -1,0 +1,38 @@
+body{
+    margin: 0px;
+ 
+    width: 100%;
+    height: 700px;
+}
+.VehiclesClass{
+   display:block;
+   padding-top: 5%;
+   padding-left:5%;
+   border:10px solid orangered;
+   margin-left: 35%;
+   width: 25%;
+   height: 300px;
+   background: whitesmoke;
+   align-content: center;
+   
+   
+  
+}
+
+.VehiclesClass img{
+    width: 200px;
+    height: 100px;
+   }
+   .VehiclesClass h1{
+       margin-block-start: 0px;
+       margin-block-end: 0px;
+       color:solid black;
+     }
+     
+
+ .AddCar{
+     font-display: block;
+     background-color: beige;
+ }       
+     
+
