@@ -1,0 +1,35 @@
+
+
+[
+    {
+        "id":1,
+        "ImgUrl":"https://firebasestorage.googleapis.com/v0/b/my-data-6e364.appspot.com/o/imagelocation%2Fpi.jpg?alt=media&token=bd5be244-7fa9-4a13-93b8-0fbbef50dd81",
+        "name":"Francis",
+        "Age":20,
+        "Gender":"male",
+        "phone":"0501248755",
+        "email":"francis@gmail.com"
+    },
+    {
+        "id":1,
+        "ImgUrl":"https://firebasestorage.googleapis.com/v0/b/my-data-6e364.appspot.com/o/imagelocation%2Fpi.jpg?alt=media&token=bd5be244-7fa9-4a13-93b8-0fbbef50dd81",
+        "name":"Edwin",
+        "Age":30,
+        "Gender":"male",
+        "phone":"0542887766",
+        "email":"edwin@gmail.com"
+    },
+    {
+        "id":1,
+        "ImgUrl":"https://firebasestorage.googleapis.com/v0/b/my-data-6e364.appspot.com/o/imagelocation%2Fpi.jpg?alt=media&token=bd5be244-7fa9-4a13-93b8-0fbbef50dd81",
+        "name":"Abigail",
+        "Age":25,
+        "Gender":"female",
+        "phone":"0243125566",
+        "email":"abigail@gmail.com"
+    }
+ 
+
+
+
+]

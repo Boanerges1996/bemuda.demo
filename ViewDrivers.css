@@ -1,0 +1,67 @@
+/* styled by Mensah Ofoli Mensah */
+/* styling for all the components in the driver's page */
+
+.DriverClass{
+    display:inline-block;
+    margin-top: 2%;
+    margin-left: 3%;
+    border: 1px solid #eee ;
+    box-shadow: 0 0 5px 5px  rgba(82, 175, 186, 0.51);
+    width:25%;
+    padding:20px;
+    background-color:  rgba(198, 228, 232, 0.51);
+    border-radius: 20px;
+
+}
+
+.DriverClass img{
+    float: left;
+    width:50%;
+    height: 200px;
+}
+
+.DriverClass h2{
+    text-align: center;
+
+}
+.DriverClass button{
+    width: 100px;
+    background-color: rgba(255, 60, 0, 0.51);
+   float: right;
+}
+
+.Base{
+    position: fixed;
+    background-color: #ccc;
+    border: 1px 1px 1px black;
+    padding: 16px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+    width: 20%;
+    height: 200px;
+    z-index: 500;
+    top: 20%;
+    left: 35%;
+}
+
+/*  Responsiveness  width of 840px*/
+@media screen and (max-width:840px){
+    .DriverClass{
+        width:50%;
+        height: 45vh;
+        background-color:  rgb(225, 238, 238);
+    }
+  
+    
+}
+
+
+/*  Responsiveness  width of 640*/
+@media screen and (max-width:640px){
+    .DriverClass{
+        width:80%;
+        height: 45vh;
+        background-color:  rgb(225, 238, 238);
+    }
+  
+}
