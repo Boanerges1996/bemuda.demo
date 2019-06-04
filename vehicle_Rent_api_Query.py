@@ -385,3 +385,116 @@ def get_all_vehicles():
         i=i+1
     
     return jsonify(vehicleUsers)
+
+def get_buses():
+    cursor = get_db().cursor()
+    bus = "bus"
+    query = '''
+        SELECT User_info.firstname,User_info.lastname,User_info.othernames,User_info.username,
+        User_info.email,User_info.telephone_number,User_info.user_avatar,vehicles.car_no,
+        vehicles.car_photo_url,vehicles.capacity,vehicles.vehicle_type,vehicles.company_name
+        FROM User_info
+        JOIN vehicles ON User_info.user_id=vehicles.user_id WHERE vehicles.vehicle_type=%s
+    '''
+    cursor.execute(query,(bus,))
+    result = cursor.fetchall()
+    buses = {}
+    i=0
+    for vehicle in result:
+        buses.update({
+            "user"+str(i):{
+                "firstname":vehicle[0],
+                "lastname":vehicle[1],
+                "othername":vehicle[2],
+                "username":vehicle[3],
+                "email":vehicle[4],
+                "telephone_number":vehicle[5],
+                "user_avatar":vehicle[6],
+                "car_no":vehicle[7],
+                "car_photo_url":vehicle[8],
+                "capacity":vehicle[9],
+                "car_type":vehicle[10],
+                "company_name":vehicle[11]
+            }
+        })
+        i=i+1
+    
+    return jsonify(buses)
+
+
+
+def get_private_cars():
+    cursor = get_db().cursor()
+    vehicle_type = "private_car"
+    query = '''
+        SELECT User_info.firstname,User_info.lastname,User_info.othernames,User_info.username,
+        User_info.email,User_info.telephone_number,User_info.user_avatar,vehicles.car_no,
+        vehicles.car_photo_url,vehicles.capacity,vehicles.vehicle_type,vehicles.company_name
+        FROM User_info
+        JOIN vehicles ON User_info.user_id=vehicles.user_id WHERE vehicles.vehicle_type=%s
+    '''
+    cursor.execute(query,(vehicle_type,))
+    result = cursor.fetchall()
+    private_cars = {}
+    i=0
+    for vehicle in result:
+        private_cars.update({
+            "user"+str(i):{
+                "firstname":vehicle[0],
+                "lastname":vehicle[1],
+                "othername":vehicle[2],
+                "username":vehicle[3],
+                "email":vehicle[4],
+                "telephone_number":vehicle[5],
+                "user_avatar":vehicle[6],
+                "car_no":vehicle[7],
+                "car_photo_url":vehicle[8],
+                "capacity":vehicle[9],
+                "car_type":vehicle[10],
+                "company_name":vehicle[11]
+            }
+        })
+        i=i+1
+    
+    return jsonify(private_cars)
+
+
+
+
+def get_troskis():
+    cursor = get_db().cursor()
+    vehicle_type = "troski"
+    query = '''
+        SELECT User_info.firstname,User_info.lastname,User_info.othernames,User_info.username,
+        User_info.email,User_info.telephone_number,User_info.user_avatar,vehicles.car_no,
+        vehicles.car_photo_url,vehicles.capacity,vehicles.vehicle_type,vehicles.company_name
+        FROM User_info
+        JOIN vehicles ON User_info.user_id=vehicles.user_id WHERE vehicles.vehicle_type=%s
+    '''
+    cursor.execute(query,(vehicle_type,))
+    result = cursor.fetchall()
+    troskis = {}
+    i=0
+    for vehicle in result:
+        troskis.update({
+            "user"+str(i):{
+                "firstname":vehicle[0],
+                "lastname":vehicle[1],
+                "othername":vehicle[2],
+                "username":vehicle[3],
+                "email":vehicle[4],
+                "telephone_number":vehicle[5],
+                "user_avatar":vehicle[6],
+                "car_no":vehicle[7],
+                "car_photo_url":vehicle[8],
+                "capacity":vehicle[9],
+                "car_type":vehicle[10],
+                "company_name":vehicle[11]
+            }
+        })
+        i=i+1
+
+    return jsonify(troskis)
+
+
+

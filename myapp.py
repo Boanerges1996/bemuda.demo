@@ -301,6 +301,50 @@ def get_all_vehicles(id):
         })
 
 
+@app.route('/user/vehicle/buses/<id>')
+@loggin_required
+def get_all_buses(id):
+    verify_id_exits = vehicle_Rent_api_Query.verify_id_in_user_info(id)
+    if verify_id_exits:
+            buses = vehicle_Rent_api_Query.get_buses()
+            return buses
+        
+    else:
+        return jsonify({
+            "message":"invalid id"
+        })
+
+
+
+@app.route('/user/vehicle/private_car/<id>',methods=["GET"])
+@loggin_required
+def get_private_cars(id):
+    verify_id_exits = vehicle_Rent_api_Query.verify_id_in_user_info(id)
+    if verify_id_exits:
+            private_cars = vehicle_Rent_api_Query.get_private_cars()
+            return private_cars
+        
+    else:
+        return jsonify({
+            "message":"invalid id"
+
+        })
+
+
+@app.route('/user/vehicle/troski/<id>',methods=["GET"])
+@loggin_required
+def get_troskis(id):
+    verify_id_exits = vehicle_Rent_api_Query.verify_id_in_user_info(id)
+    if verify_id_exits:
+            troskis = vehicle_Rent_api_Query.get_troskis()
+            return troskis
+    else:
+        return jsonify({
+            "message":"invalid id"
+
+        })
+
+
 
 
 
