@@ -3,7 +3,7 @@ from mydbkey import myDb
 from flask_mysqldb import MySQL
 # from flask_mysqldb import MySQL
 from db_service import get_db, close_db
-import vehicle_API_Queries
+# import vehicle_API_Queries
 from passlib.hash import sha256_crypt
 from functools import wraps
 import jwt
