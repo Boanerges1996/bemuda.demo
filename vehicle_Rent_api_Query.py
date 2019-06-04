@@ -355,11 +355,11 @@ def register_vehicle(car_no,car_photo_url,vehicle_type,capacity,company_name,use
 def get_all_vehicles():
     cursor = get_db().cursor()
     query = '''
-        SELECT User_info.firstname,User_info.lastname,User_info.othernames,User_info.username,
-        User_info.email,User_info.telephone_number,User_info.user_avatar,vehicles.car_no,
+        SELECT user_info.firstname,user_info.lastname,user_info.othernames,user_info.username,
+        user_info.email,user_info.telephone_number,user_info.user_avatar,vehicles.car_no,
         vehicles.car_photo_url,vehicles.capacity,vehicles.vehicle_type,vehicles.company_name
-        FROM User_info
-        JOIN vehicles ON User_info.user_id=vehicles.user_id
+        FROM user_info
+        JOIN vehicles ON user_info.user_id=vehicles.user_id
     '''
     cursor.execute(query)
     result = cursor.fetchall()
@@ -390,11 +390,11 @@ def get_buses():
     cursor = get_db().cursor()
     bus = "bus"
     query = '''
-        SELECT User_info.firstname,User_info.lastname,User_info.othernames,User_info.username,
-        User_info.email,User_info.telephone_number,User_info.user_avatar,vehicles.car_no,
+        SELECT user_info.firstname,user_info.lastname,user_info.othernames,user_info.username,
+        user_info.email,user_info.telephone_number,user_info.user_avatar,vehicles.car_no,
         vehicles.car_photo_url,vehicles.capacity,vehicles.vehicle_type,vehicles.company_name
-        FROM User_info
-        JOIN vehicles ON User_info.user_id=vehicles.user_id WHERE vehicles.vehicle_type=%s
+        FROM user_info
+        JOIN vehicles ON user_info.user_id=vehicles.user_id WHERE vehicles.vehicle_type=%s
     '''
     cursor.execute(query,(bus,))
     result = cursor.fetchall()
@@ -427,11 +427,11 @@ def get_private_cars():
     cursor = get_db().cursor()
     vehicle_type = "private_car"
     query = '''
-        SELECT User_info.firstname,User_info.lastname,User_info.othernames,User_info.username,
-        User_info.email,User_info.telephone_number,User_info.user_avatar,vehicles.car_no,
+        SELECT user_info.firstname,user_info.lastname,user_info.othernames,user_info.username,
+        user_info.email,user_info.telephone_number,user_info.user_avatar,vehicles.car_no,
         vehicles.car_photo_url,vehicles.capacity,vehicles.vehicle_type,vehicles.company_name
-        FROM User_info
-        JOIN vehicles ON User_info.user_id=vehicles.user_id WHERE vehicles.vehicle_type=%s
+        FROM user_info
+        JOIN vehicles ON user_info.user_id=vehicles.user_id WHERE vehicles.vehicle_type=%s
     '''
     cursor.execute(query,(vehicle_type,))
     result = cursor.fetchall()
@@ -465,11 +465,11 @@ def get_troskis():
     cursor = get_db().cursor()
     vehicle_type = "troski"
     query = '''
-        SELECT User_info.firstname,User_info.lastname,User_info.othernames,User_info.username,
-        User_info.email,User_info.telephone_number,User_info.user_avatar,vehicles.car_no,
+        SELECT user_info.firstname,user_info.lastname,user_info.othernames,user_info.username,
+        user_info.email,user_info.telephone_number,user_info.user_avatar,vehicles.car_no,
         vehicles.car_photo_url,vehicles.capacity,vehicles.vehicle_type,vehicles.company_name
-        FROM User_info
-        JOIN vehicles ON User_info.user_id=vehicles.user_id WHERE vehicles.vehicle_type=%s
+        FROM user_info
+        JOIN vehicles ON user_info.user_id=vehicles.user_id WHERE vehicles.vehicle_type=%s
     '''
     cursor.execute(query,(vehicle_type,))
     result = cursor.fetchall()
