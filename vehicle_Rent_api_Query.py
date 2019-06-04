@@ -25,11 +25,13 @@ def sign_up(firstname,lastname,othernames,username,tel_no,email,password):
             "id":some_info[0],
             "user_avatar":some_info[1],
             "token":token,
-            "isAdmin":str(some_info[2])
+            "isAdmin":str(some_info[2]),
+            "logged":True
         }
     except Exception as error:
         return jsonify({
-            "message":"Either username,email or telephone number exists"
+            "message":"Either username,email or telephone number exists",
+            "logged":False
         })
 
 def sign_in(username,password):
@@ -41,7 +43,8 @@ def sign_in(username,password):
     result = cursor.fetchall()
     if result == tuple():
         return jsonify({
-            "Message":"Invalid username"
+            "Message":"Invalid username",
+            "logged":False
         })
     else:
         myPassword=result[0][0]
@@ -64,7 +67,8 @@ def sign_in(username,password):
                 "telephone_number":user_info[6],
                 "user_avatar":user_info[7],
                 "isAdmin":user_info[8],
-                "token":token
+                "token":token,
+                "logged":True
             })
         
 
