@@ -102,7 +102,7 @@ def verify_token(decode_token):
     
     cursor = get_db().cursor()
     query = '''
-            SELECT username FROM User_info WHERE username=%s
+            SELECT username FROM user_info WHERE username=%s
             '''
     cursor.execute(query,(decode_token,))
     verify_person = cursor.fetchall()
